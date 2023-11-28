@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Tooplate">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Login</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/tooplate-artxibition.css' %}">
+</head>
+    <title>Login</title>
+</head>
+<body>
+<div class="main-banner">
+<div class="main-content"><h2>PSC TUTOR</h2>
+<form action="login" method="post">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="UserName"><br><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <input type="submit">
+
+</form>
+{% for msg in messages %}
+<br><p style="color:white;font-size:30px;"><b> {{msg}}</b></p>
+
+{% endfor %}
+</div>
+</div>
+</body>
+</html>
